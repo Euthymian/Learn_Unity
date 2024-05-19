@@ -19,8 +19,11 @@ public class FireManager : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time > nextTime)
         {
-            Debug.Log(Time.time);  // Total time game run after clicked Start
+            // Total time game run after clicked Start
+            //Debug.Log(Time.time);
             nextTime = Time.time + 0.5f;
+            Vector3 mousePos = Input.mousePosition;
+            Debug.Log(mousePos);
             Instantiate(prefabs, new Vector3(0, Random.RandomRange(0, 100), 0), Quaternion.identity);
         }
         //print(Input.GetAxis("Horizontal"));
