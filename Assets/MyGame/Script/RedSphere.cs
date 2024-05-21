@@ -20,4 +20,32 @@ public class RedSphere : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Start colliding");
+        Debug.Log(collision.gameObject.name);
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("Stay colliding");
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("Finish colliding");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Start trigger");
+        Debug.Log(other.gameObject.name);
+        // Debug.Log(other.name);
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("Stay trigger");
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Finish trigger");
+    }
 }

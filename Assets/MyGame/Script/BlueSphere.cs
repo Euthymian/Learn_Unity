@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BlueSphere : MonoBehaviour
 {
-    [SerializeField]
-    private CharacterController cc;
+    
 
     // Start is called before the first frame update
     void Start()
