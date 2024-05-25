@@ -37,6 +37,11 @@ public class PlayerCollisionManager : MonoBehaviour
                 GameManager.Instance.IncreaseLaps();
             }
         }
+        else if (other.tag == "Coin")
+        {
+            Destroy(other.gameObject);
+            GameManager.Instance.SetCoin(1);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

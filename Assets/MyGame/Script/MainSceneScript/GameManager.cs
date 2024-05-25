@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [SerializeField] int health, fuel, laps;
+    [SerializeField] int health, fuel, laps, coins;
     int capacity;
 
     public bool ToCheckPos { get; set; }
@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        coins = 0;
         laps = 0;
         capacity = 100;
         fuel = 80;
@@ -42,5 +43,13 @@ public class GameManager : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+    public void SetCoin(int n)
+    {
+        coins += n;
+    }
+    public int GetCoin()
+    {
+        return coins;
     }
 }

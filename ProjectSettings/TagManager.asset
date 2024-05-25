@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fuel
   - Rock
+  - Coin
   layers:
   - Default
   - TransparentFX
