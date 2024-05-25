@@ -21,6 +21,6 @@ public class SliderScript : MonoBehaviour
 
     public void OnValueChangeSlider()
     {
-        Debug.Log("Changed");
+        Debug.Log("Changed to " + slider.value);
     }
 }
