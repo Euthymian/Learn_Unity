@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 156989352}
   - component: {fileID: 156989351}
   - component: {fileID: 156989350}
+  - component: {fileID: 156989354}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -264,6 +265,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &156989354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156989349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbaaff68af90233458519b1ed3f25d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textCoin: {fileID: 2072491179}
+  textLaps: {fileID: 175554281}
 --- !u!1 &166583209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1357,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571125477}
   m_CullTransparentMesh: 1
+--- !u!1 &612058432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 612058434}
+  - component: {fileID: 612058433}
+  - component: {fileID: 612058435}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &612058433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612058432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f21f130219710478123591c15244bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  LapsEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  health: 0
+  fuel: 0
+  laps: 0
+  coins: 0
+--- !u!4 &612058434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612058432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.067987, y: -6.4911413, z: -12.627143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612058435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612058432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 995a81af8b0455a4c838f604be4ca93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &635622862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1592,7 @@ GameObject:
   - component: {fileID: 772894863}
   - component: {fileID: 772894862}
   m_Layer: 5
-  m_Name: DiamondIcon
+  m_Name: LapsIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1556,7 +1638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a02faf19ccb5754a8d5be64868dab83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2956bea28d407f04eafbf4c707ea6bfa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1586,7 +1668,7 @@ GameObject:
   - component: {fileID: 811818033}
   - component: {fileID: 811818032}
   m_Layer: 5
-  m_Name: DiamondStore
+  m_Name: LapsStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

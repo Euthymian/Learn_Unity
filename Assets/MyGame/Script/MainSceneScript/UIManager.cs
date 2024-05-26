@@ -6,10 +6,14 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI textCoin;
+    public TextMeshProUGUI textLaps;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(UpdateUI());
+        textCoin.text = DataManager.DataCoin.ToString();
+        textLaps.text = DataManager.DataLaps.ToString();
+        GameManager.Instance.CoinEvent.AddListener(UpdateCoins);
+        GameManager.Instance.LapsEvent.AddListener(UpdateLaps);
     }
 
     // Update is called once per frame
@@ -17,13 +21,12 @@ public class UIManager : MonoBehaviour
     {
         
     }
-
-    IEnumerator UpdateUI()
+    void UpdateLaps(int laps)
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-            textCoin.text = GameManager.Instance.GetCoin().ToString();
-        }
+        textLaps.text = laps.ToString();
+    }
+    void UpdateCoins(int coins)
+    {
+        textCoin.text = coins.ToString();
     }
 }
